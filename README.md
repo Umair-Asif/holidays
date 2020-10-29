@@ -1,6 +1,6 @@
-# Holidays Library
+# Holidays Library 
 
- • Christmas & New Year's: 
+    • Christmas & New Year's: 
         ◦ December 21st - January 4th (the Monday before Christmas thru the first working Monday in January.)
 
     • Thanksgiving: 
