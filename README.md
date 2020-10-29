@@ -19,7 +19,7 @@
    
    ## Comparing TWO LISTS
    
-        - isListValid(currentYear, listOne);
+        isListValid(currentYear, listOne);
    ## VERIFYING IF GIVEN DATE IS VALID FROM LIST
    
         isDateValid(currentYear, "2020-12-21");
