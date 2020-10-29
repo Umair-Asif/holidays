@@ -15,3 +15,20 @@
         ◦ The Thursday before the last Monday in the month of May thru the Tuesday after the last Monday in  the month of May. (For example: In 2020 the dates were: 5/21-5/26, but the dates change every year).
 
     • Independence Day: July 1st - 5th
+
+   
+   ## Comparing TWO LISTS
+   
+        - isListValid(currentYear, listOne);
+   ## VERIFYING IF GIVEN DATE IS VALID FROM LIST
+   
+        isDateValid(currentYear, "2020-12-21");
+   ## GET CURRENT YEAR HOLIDAYS
+   
+        getList();
+   ## GET HOLIDAYS BY GIVEN YEAR
+   
+        getListByYear(2022);
+   ## VERIFYING AND RETURNING IT BACK, IF GIVEN DATE IS PRESENT IN HOLIDAYS
+   
+        getDate("2020-12-21");
