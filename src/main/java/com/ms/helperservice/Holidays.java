@@ -10,22 +10,24 @@ public class Holidays {
 
     public static void main(String args[]) {
 
-        //Comparing lists
-        //List1: Pre-defined
-        //List2: "User Entry ArrayList<String>"
+        Calendar c = Calendar.getInstance();
+        int currentYear = c.get(Calendar.YEAR);
         List<String> listOne = new ArrayList<>(Arrays.asList("2020-07-01", "2020-07-02", "2020-07-03", "2020-07-04", "2020-07-06"));
-        System.out.println(isListValid(2020, listOne));
 
-        //Verifying single date from list
-        //(year: int, date: String)
-        //e.g
-        //(year: 2020: date: "2020-21-12")
-        System.out.println(isDateValid(2020, "2020-12-21"));
 
-        //Get Current Year Holidays
+        System.out.println("Comparing TWO LISTS");
+        System.out.println(isListValid(currentYear, listOne));
+        System.out.println();
+        System.out.println("VERIFYING IF GIVEN DATE IS VALID FROM LIST ");
+        System.out.println(isDateValid(currentYear, "2020-12-21"));
+        System.out.println();
+        System.out.println("GET CURRENT YEAR HOLIDAYS");
         System.out.println(getList());
-
-        //Get Date From Defined Holidays
+        System.out.println();
+        System.out.println("GET HOLIDAYS BY GIVEN YEAR");
+        System.out.println(getListByYear(2022));
+        System.out.println();
+        System.out.println("VERIFYING AND RETURNING IT BACK, IF GIVEN DATE IS PRESENT IN HOLIDAYS");
         System.out.println(getDate("2020-12-21"));
     }
 
@@ -171,6 +173,7 @@ public class Holidays {
         return cd.getTime();
     }
 
+    //Getting all the holidays(lists) and pushing them into Array List
     public static List<String> getAll(int getYear) {
 
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
@@ -196,6 +199,10 @@ public class Holidays {
         return combinedList;
     }
 
+    //Verifying single date from list
+    //(year: int, date: String)
+    //e.g
+    //(year: 2020: date: "2020-21-12")
     public static boolean isDateValid(int year, String date) {
 
         List<String> listOfString = getAll(year);
@@ -204,6 +211,9 @@ public class Holidays {
         return result;
     }
 
+    //Comparing lists
+    //List1: Pre-defined
+    //List2: "User Entry ArrayList<String>"
     public static boolean isListValid(int year, List date) {
         List<String> listOfString = getAll(year);
 
@@ -215,6 +225,7 @@ public class Holidays {
         return result;
     }
 
+    //Getting current year holidays
     public static List<String> getList() {
         Calendar c = Calendar.getInstance();
         List<String> list = getAll(c.get(Calendar.YEAR));
@@ -222,6 +233,15 @@ public class Holidays {
         return list;
     }
 
+    //Getting all holidays by User Defined Year
+    public static List<String> getListByYear(int year) {
+        Calendar c = Calendar.getInstance();
+        List<String> list = getAll(year);
+
+        return list;
+    }
+
+    //Verifying date and returning it back
     public static Object getDate(String date) {
         Calendar c = Calendar.getInstance();
         List<String> list = getAll(c.get(Calendar.YEAR));
@@ -238,3 +258,4 @@ public class Holidays {
     }
 
 }
+
